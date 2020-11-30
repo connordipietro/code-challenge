@@ -4,8 +4,32 @@ const findSum = function(array) {
 };
 
 const findFrequency = function(array) {
-  // your code here - don't forget to return an object!
-  // https://jsfiddle.net/connordip/q9vpfdw2/35/
+
+const result = {};
+const counts = {};
+
+array.forEach((item) => {
+  if (counts[item]) {
+    counts[item]++;
+  } else {
+    counts[item] = 1
+  }
+});
+
+let most = 0;
+let least = Infinity;
+
+Object.entries(counts).forEach(([letter, count]) => {
+  if (count > most) {
+    result.most = letter;
+    most = count;
+  }
+  if (count < least) {
+    result.least = letter;
+    least = count;
+  }
+});
+return result
 };
 
 const isPalindrome = function(str) {
