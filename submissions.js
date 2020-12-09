@@ -1,8 +1,11 @@
+//challenge 1
 const findSum = function(array) {
-  // your code here - don't forget to return a number!
-  // 
+   return array.reduce(function(a,b){
+    return a + b;
+  }, 0); 
 };
 
+//challenge 2
 const findFrequency = function(array) {
 
 const result = {};
@@ -32,9 +35,19 @@ Object.entries(counts).forEach(([letter, count]) => {
 return result
 };
 
+
+//challenge 3
 const isPalindrome = function(str) {
-  // your code here - don't forget to return a boolean!
+  let array1 = str.split("");
+  let array2 = array1.reverse();
+  let string1 = array2.join("");
+  if (str.toLowerCase() === string1.toLowerCase()) {
+  return true;
+  } else {
+    return false;
+  }
 };
+
 
 const largestPair = function(array) {
   // your code here - don't forget to return a number!
