@@ -49,14 +49,30 @@ const isPalindrome = function(str) {
 };
 
 
+//challenge 4
 const largestPair = function(array) {
   // your code here - don't forget to return a number!
 };
 
+//challenge 5
 const removeParenth = function(str) {
-  // your code here - don't forget to return a string!
+   let array1 = str.split('');
+   let firstParenth = array1.indexOf("(");
+   let lastParenth = array1.indexOf(")");
+   let numberRemoved = lastParenth - firstParenth + 1;
+   let removed = array1.splice(firstParenth, numberRemoved);
+   let newString = array1.join('');
+   return newString
 };
 
+
+
+
+
+
+
+
+//challenge 6
 const scoreScrabble = function(str) {
   // your code here - don't forget to return a number!
 };
